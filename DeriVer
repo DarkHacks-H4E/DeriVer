@@ -45,6 +45,7 @@ $endtime = time() + ($time ? $time : 1000000);
 socket(flood, PF_INET, SOCK_DGRAM, 17);
 
 print "\033[2J";
+print "\033[0;0H";
 
 printf "[0;32m>> Made by DeriVer  \n"; 
 printf "[0;31m>> hitting the ip    \n";
