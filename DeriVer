@@ -4,9 +4,9 @@ use Getopt::Long;
 use Time::HiRes qw( usleep gettimeofday ) ;
 
 our $port = 80;
-our $size = 300;
+our $size = 0;
 our $time = 0;
-our $bw   = 1500;
+our $bw   = 0;
 our $help = 0;
 our $delay= 0;
 
