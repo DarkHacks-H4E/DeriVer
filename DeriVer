@@ -52,9 +52,9 @@ print "------------------------------------------- \n";
 print "-=-=-         DDoS Information        -=-=- \n";
 printf "Interpacket delay $delay msec\n" if $delay;
 printf "total IP bandwidth $bw kbps\n" if $bw;
-print "Size used : $size \n";
-print "Time used : $time \n";
-print "Port used : $port \n";
+print "Size used : $psize \n";
+print "Time used : $endtime \n";
+print "Port used : $pport \n";
 printf "[1;31m>> Press CTRL+C to stop the attack  \n" unless $time;
 
 die "Invalid package size: $size\n" if $size && ($size < 64 || $size > 1500);
