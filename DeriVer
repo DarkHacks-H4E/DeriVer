@@ -48,13 +48,13 @@ printf "[0;32m>> Made by DeriVer  \n";
 printf "[0;31m>> hitting the ip    \n";
 printf "[0;36m>> hitting the ports     \n";
 ($size ? "$size-byte" : "") . " " . ($time ? "" : "") . "\033[1;32m\033[0m\n\n";
-print "-------------------------------------------"
-print "-=-=-         DDoS Information        -=-=-"
-print "Interpacket delay $delay msec\n" if $delay;
-print "total IP bandwidth $bw kbps\n" if $bw;
-print "Size used : $size"
-print "Time used : $time"
-print "Port used : $port"
+printf "-------------------------------------------"
+printf "-=-=-         DDoS Information        -=-=-"
+printf "Interpacket delay $delay msec\n" if $delay;
+printf "total IP bandwidth $bw kbps\n" if $bw;
+printf "Size used : $size"
+printf "Time used : $time"
+printf "Port used : $port"
 printf "[1;31m>> Press CTRL+C to stop the attack  \n" unless $time;
 
 die "Invalid package size: $size\n" if $size && ($size < 64 || $size > 1500);
