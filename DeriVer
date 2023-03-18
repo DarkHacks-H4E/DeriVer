@@ -57,7 +57,6 @@ printf "Interpacket delay $delay msec\n" if $delay;
 printf "total IP bandwidth $bw kbps\n" if $bw;
 print "[0;32mIp used : [0;31m$ip \n";
 print "[0;32mSize used : [0;31m$size \n";
-print "[0;32mSize used : [0;31m$size-byte bytes \n";
 print "[0;32mTime used : [0;31m$endtime \n";
 print "[0;32mPort used : [0;31m$port \n";
 print "[0;32mDelay used : [0;31m$delay \n";
